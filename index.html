@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Introducción a Linux</title>
+		<meta name="description" content="Introduccion a la programación con Django">
+        <meta name="author" content="Carlos César Huamani Sifuentes">
+        <link href='http://fonts.googleapis.com/css?family=Fenix' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css">
+		<link rel="stylesheet" href="css/zenburn.css">
+	</head>
+	<body>
+		<div class="reveal">
+            <div class="slides">
+            	<section data-background="#1D375B">
+	            	<section>
+	                    <h1>Linux</h1>
+	                    <h3>Entendiendo como trabaja</h3>
+	                    <img src="img/tux.png">
+	                    <p>
+	                    	<small>
+	                    		Creado por <a href="http://about.me/carloshs92">Carlos Huamaní </a> / <a href="http://twitter.com/carlosHS92">@carlosHS92</a>
+	                    	</small>
+	                    </p>
+	                </section>
+	                <section>
+	                	<h3>UNIX</h3>
+	                	<p style="text-align:justify;">Sistema operativo portable, multitarea y multiusuario;  desarrollado, en principio, en 1969.</p>
+	                	<p style="text-align:justify;">A lo largo de la historia ha surgido una gran multitud de implementaciones comerciales de UNIX. Los más importantes son:</p>
+	                	<ul>
+	                		<li><b>Solaris, </b>uno de los más difundidos en el entorno empresarial y conocido por su gran estabilidad.</li>
+	                		<li><b>AIX, </b>el UNIX propietario de IBM</li>
+	                		<li><b>Mac OS X, </b>su diferencia marcada es que posee una interfaz gráfica propietaria llamada Aqua, y es principalmente desarrollada en Objective-C</li>
+	                	</ul>
+	                </section>
+	                <section>
+	                	<h3>¿Qué es GNU/Linux?</h3>
+	                	<p style="text-align:justify;">Es uno de los términos empleados para referirse a la combinación del núcleo o kernel libre <b>similar</b> a Unix denominado Linux con el sistema GNU.</p>
+	                	<p style="text-align:justify;">A pesar de que Linux es el núcleo del sistema operativo, parte fundamental de la interacción entre el hardware y el usuario se maneja usualmente con las herramientas del <b>proyecto GNU</b></p>
+	                	<img src="img/gnu-linux.jpg"/>
+	                </section>
+	                <section>
+	                	<h3>Distribuciones</h3>
+	                	<p style="text-align:justify;">Agrupamiento del núcleo del sistema operativo Linux y otra serie de aplicaciones de uso general o no tan general. Las empresas que desarrollan las distribuciones de Linux están en su derecho al cobrar una cierta cantidad por el software que ofrecen.</p>
+	                	<img src="img/linux-distributions.jpg"/>
+	                </section>
+	                <section>
+	                	<h3>Primeras Distros</h3>
+	                	<ol>
+	                		<li><b>Slackware, </b>una de las primeras distribuciones organizadas. Muy sencilla y primitiva.<br/><img src="img/slackware.jpg" width="100"/></li>
+	                		<li><b>Redhat, </b>una de las distribuciones comerciales mas difundidas, de instalación relativamente amigable.<br/><img src="img/redhat.jpg" width="100"/></li>
+	                		<li><b>Debian, </b>su base de voluntarios, su naturaleza no comercial y su modelo de desarrollo abierto la distingue de otras distribuciones del sistema operativo GNU. <br/><img src="img/debian.png" width="100"/></li>
+	                	</ol>
+	                </section>
+	                <section>
+	                	<h3>Distros mas importantes y sus origines</h3>
+	                	<img src="img/linux-tree.png"/>
+	                </section>
+                </section>
+                <section data-background="img/matrix.jpg">
+                	<section>
+                		<h1>Consola de Linux</h1>
+	                	<p>Comandos básicos</p>
+    	            	<img src="img/tux-matrix.png">
+                	</section>
+                	<section>
+                		<h3>Archivos y Directorios</h3>
+                		<ol>
+							<li><b>cd .. </b>: retroceder un nivel.</li>
+							<li><b>cd </b>: ir al directorio raíz.</li>
+							<li><b>cd -</b>: ir (regresar) al directorio anterior.</li>
+							<li><b>pwd</b>: mostrar el camino del directorio de trabajo.</li>
+							<li><b>ls -l</b>: mostrar los detalles de ficheros y carpetas de un directorio.</li>
+							<li><b>ls -a</b>: mostrar los ficheros ocultos.</li>
+							<li><b>mkdir carpeta1</b>: crear una carpeta o directorio con nombre 'carpeta1'.</li>
+							<li><b>mkdir -p /tmp/dir1/dir2</b>: crear un árbol de directorios.</li>
+							<li><b>rm -f archivo1</b>: borrar el fichero llamado 'archivo1'.</li>
+							<li><b>rmdir dir1</b>: borrar la carpeta llamada ‘dir1′.</li>							
+							<li><b>mv dir1 new_dir</b>: renombrar o mover un fichero o carpeta (directorio).</li>
+							<li><b>cp file1 file2</b>: copiar dos ficheros al unísono.</li>
+						</ol>
+                	</section>
+                	<section>
+                		<h3>Encontrar Archivos</h3>
+                		<ol>
+							<li><b>find / -name file1</b>: buscar fichero y directorio a partir de la raíz del sistema.</li>
+							<li><b>find /home/user1 -name \*.bin</b>: buscar ficheros con extensión '. bin' dentro del directorio '/ home/user1'.</li>
+						</ol>
+                	</section>
+                	<section>
+                		<h3>Espacio de disco</h3>
+                		<ol>
+                			<li><b>df -h</b>: mostrar una lista de las particiones montadas.</li>
+							<li><b>du -sh dir1</b>: Estimar el espacio usado por el directorio 'dir1'.</li>
+						</ol>
+                	</section>
+                	<section>
+                		<h3>Actualizador de paquetes YUM</h3>
+                		<ol>
+							<li><b>yum install package_name</b>: descargar e instalar un paquete rpm.</li>
+							<li><b>yum localinstall package_name.rpm</b>: este instalará un RPM y tratará de resolver todas las dependencies para ti, usando tus repositorios.</li>
+							<li><b>yum update package_name.rpm</b>: actualizar todos los paquetes rpm instalados en el sistema.</li>
+							<li><b>yum update package_name</b>: modernizar / actualizar un paquete rpm.</li>
+							<li><b>yum remove package_name</b>: eliminar un paquete rpm</li>
+							<li><b>yum list</b>: listar todos los paquetes instalados en el sistema.</li>
+							<li><b>yum search package_name</b>: Encontrar un paquete en repositorio rpm.</li>
+							<li><b>yum clean packages</b>: limpiar un caché rpm borrando los paquetes descargados.</li>
+						</ol>
+                	</section>
+                	<section>
+                		<h3>Mas comandos</h3>
+                		<ol>
+                			<li><b>gedit archivo</b>: abre el archivo usando el gedit</li>
+                			<li><b>nano archivo</b>: abre el archivo usando el nano</li>
+                			<li><b>su root</b>: cambia del usuario actual al usuario root</li>
+                			<li><b>cat</b>: muestra el contenido de archivos.</li>
+                			<li><b>clear</b>: limpia el terminal</li>
+                			<li><b>python</b>: ingresamos a la consola de python</li>
+                		</ol>
+
+                		<p>Para mas comandos visitar <a href="http://blog.desdelinux.net/mas-de-400-comandos-para-gnulinux-que-deberias-conocer/#otros">blog.desdelinux.net</a></p>
+                	</section>
+                </section>
+            </div>
+        </div>
+		<script src="js/reveal.min.js"></script>
+		<script type="text/javascript">
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                    controls: true,
+                    progress: true,
+                    history: true,
+                    center: true,
+                    theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                    transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+            });   
+		</script>
+	</body>
+</html>
